@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root  {
+    --font: 'Festive', serif;
+}
+
+body {
+    background-color: rgb(243, 180, 97);
+}
+
+.container {
+    background-color: rgb(243, 180, 97);
+    height: auto;
+    width: 100%;
+    margin: auto;
+    font-family: var(--font) 
+}
+
+.title {
+    margin: auto;
+    margin-top: 15px;
+    width: auto;
+    text-align: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.title h1 {
+    padding: 29px 0px 10px 15px;
+    color: white;
+    font-size: 45px;
+}
+
+.title button {
+    padding: 10px 7px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: var(--font);
+}
+
+.title i {
+    transform: rotate(90deg);
+    font-size: 45px;
+    width: 20px;
+    color: lawngreen;   
+}
+
+.title button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.notes {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.notes-menu {
+    position: fixed;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    height: 320px;
+    box-shadow: 0px 10px 27px 5px  black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.425);
+    min-height: 100%;
+    max-height: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: none;
+}
+
+.text {
+    background-color: white;
+    outline: none; 
+    border: none;
+    display: none;
+    font-size: 22px;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 100%;
+    font-family: var(--font);
+    overflow: hidden;
+}
+
+.notes i {
+    padding: 7px;
+    background: white;
+    color: gray;
+    font-size: 25px;
+    display: none;
+}
+
+.sticky-notes {
+    font-family: var(--font);
+    height: 250px;
+    font-size: 27px;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 250px;
+    word-wrap: break-word;
+    padding: 15px 5px 0px 15px;
+    box-shadow: 1px 3px 10px 5px  rgba(0, 0, 0, 0.582);
+}
+
+@media (max-width: 320px) {
+    .notes-menu {
+        width: 250px;
+    }
+    .sticky-notes {
+        width: 250px;
+        height: 300px;
+    }
+}
+
